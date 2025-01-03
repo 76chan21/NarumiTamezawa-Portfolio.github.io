@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ddb1754e9e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="inner">
+        <a href="index.html">
+            <figure class="logo" id="headLogo" alt="narumi logo"></figure>
+        </a>
+        <figure class="burger" href=""><em class="fa-solid fa-bars fa-xl" alt="Burger menu"></em></figure>
+        <nav class="nav">
+            <ul class="navSec">
+                <li class="navItem"><a href="works.html">work</a></li>
+                <li class="navItem"><a href="about.html">about</a></li>
+                <li class="navItem"><a href="/asset/Narumi_Resume_2024May.pdf" target="_blank">resume</a></li>
+                <li class="navItem"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <figure class="closeBurger" alt="close button" href=""><i class="fa-solid fa-xmark  fa-xl"></i></figure>
+    <div class="burgerMenu">
+        <nav>
+            <ul class="navSecB">
+                <li class="navItem"><a href="works.html">work</a></li>
+                <li class="navItem"><a href="about.html">about</a></li>
+                <li class="navItem"><a href="/asset/Narumi_Resume_2024May.pdf" target="_blank">resume</a></li>
+                <li class="navItem"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="burgerBack"></div>
+    <div class="underHeader"></div>
+
+    <main id="contact">
+        <div id="contactImage"></div>
+        <aside>
+            <h2 class="secTitle">contact</h2>
+            <h5>Tell me what I can do for you</h5>
+            <figure></figure>
+            <form method="post" action="">
+                <div class="formNames">
+                    <fieldset>
+                        <legend>Firstname *</legend>
+                        <input class="input" id="firstname" type="text" required />
+                        <p class="emptyAlert"></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Lastname *</legend>
+                        <input class="input" id="lastname" type="text" required />
+                        <p class="emptyAlert"></p>
+                    </fieldset>
+                </div>
+
+                <fieldset class="form">
+                    <legend>Email *</legend>
+                    <input class="input" id="emailaddress" type="text" required />
+                    <p class="emptyAlert"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Subject</legend>
+                    <input class="input" id="subject" type="text" />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message *</legend>
+                    <textarea class="input" name="message" id="message" type="text" cols="30" rows="10"
+                        required></textarea>
+                    <p class="emptyAlert"></p>
+                </fieldset>
+
+                <p>* indicates a required field</p>
+                <p id="emptyAlart"></p>
+
+                <fieldset id="submit">
+                    <input id="submitBtn" type="submit" value="submit">
+                </fieldset>
+                <p>Narumi Tamezawa</p>
+                <p>narumi.tamezawa@gmail.com</p>
+            </form>
+        </aside>
+
+        <div id="confirmation">
+            <figure id="confirmationClose" alt="close button"></figure>
+            <div>
+                <figure alt="Rabbit holding a letter"></figure>
+                <p id="confirmationText">
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav id="sns">
+            <a href="https://www.youtube.com/@76mi21" target="_blank"><em class="fa fa-youtube-play fa-2xl"></em></a>
+            <a href="https://www.instagram.com/_narumitms_/" target="_blank"><em
+                    class="fa fa-instagram fa-2xl"></em></a>
+            <a href="https://www.linkedin.com/in/narumi-tamezawa-7357b1288" target="_blank"><em
+                    class="fa-brands fa-linkedin fa-2xl"></em></a>
+        </nav>
+        <p>&copy; 2024 Narumi Tamezawa</p>
+    </footer>
+
+
+    <!-- External JS -->
+    <script src="/assets/Js/script.js" defer></script>
+</body>
+
+</html>

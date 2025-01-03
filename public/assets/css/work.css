@@ -1,0 +1,308 @@
+@charset "UTF-8";
+#work {
+  margin-top: 70px;
+}
+@media (max-width: 650px) {
+  #work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#category {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+@media (max-width: 650px) {
+  #category {
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 45px;
+    width: 94vw;
+    height: 19.5px;
+    scroll-behavior: smooth;
+    /* スムーズスクロール */
+    -webkit-overflow-scrolling: touch;
+    /* タッチスクリーンのスムーズスクロール対応 */
+    scrollbar-width: 0.1px;
+    /* Firefoxでスクロールバーを非表示 */
+    padding-bottom: 10px;
+    border-bottom: #3F3F3D 0.5px solid;
+    margin-bottom: 30px;
+    overflow-y: hidden;
+  }
+}
+#category .filter-container::-webkit-scrollbar {
+  display: none;
+  /* Webkit系ブラウザでスクロールバーを非表示 */
+}
+#category .filter-btn {
+  position: relative;
+  border: none;
+  background: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+#category .filter-btn::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0px;
+  top: 28px;
+  border-radius: 5%;
+  background-color: #3F3F3D;
+  opacity: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+#category .filter-btn:hover::after {
+  opacity: 1;
+  top: 24px;
+}
+#category .filter-btn:hover {
+  font-weight: 700;
+  transition: font-weight 0.5s ease;
+}
+
+.article-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+.article-wrap .work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  gap: 40px;
+}
+@media (max-width: 650px) {
+  .article-wrap .work {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+.article-wrap .work .workImage {
+  width: 760px;
+  height: 426px;
+  overflow: hidden;
+  display: flex;
+  /* 中央揃え用 */
+  justify-content: center;
+  /* 中央揃え */
+  align-items: center;
+  /* 中央揃え */
+  position: relative;
+  /* ホバーエフェクト用に必要 */
+}
+@media (max-width: 650px) {
+  .article-wrap .work .workImage {
+    width: 100vw;
+    height: 56.25vw;
+  }
+}
+.article-wrap .work .workImage img {
+  width: 100%;
+  /* コンテナの幅に合わせる */
+  height: auto;
+  /* アスペクト比を保持 */
+  object-fit: cover;
+  /* 画像をコンテナに収める（必要に応じて調整） */
+}
+.article-wrap .work #naturcycle-thumb {
+  background-image: url(/assets/img/NaturCycle.png);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #fivefall-thumb {
+  background-image: url(/assets/img/5Senses-01.png);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #hannah-thumb {
+  background-image: url(/assets/img/血みどろ_サムネ.JPG);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #tomoshi-thumb {
+  background-image: url(/assets/img/エンドカード2022_3.png);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 650px) {
+  .article-wrap .work {
+    width: 100%;
+  }
+}
+.article-wrap .work .otherwork {
+  position: relative;
+}
+.article-wrap .work .channel {
+  position: relative;
+}
+.article-wrap .work .hoverover {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(35, 35, 34, 0.5921568627);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: #FFF;
+  font-size: 1.2em;
+  transition: opacity 0.3s ease;
+}
+.article-wrap .work .hoverover:hover {
+  opacity: 1;
+}
+.article-wrap .workDescription {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  width: 40%;
+}
+@media (max-width: 650px) {
+  .article-wrap .workDescription {
+    width: 90%;
+    margin: 10px 20px;
+  }
+}
+.article-wrap .workDescription .workTitle {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.article-wrap .workDescription span {
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.thumbnail {
+  position: relative;
+  /* 任意 */
+  cursor: pointer;
+}
+
+.thumbnail .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 18px 19px 18px 22px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover .play-icon {
+  opacity: 1;
+}
+
+/* ライトボックススタイル */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox iframe {
+  width: 100%;
+  /* 親要素の幅に合わせる */
+  height: 56.25vw;
+  /* 16:9 のアスペクト比を保持 */
+  max-height: 80vh;
+  /* 画面の高さを超えないように制限 */
+  border: none;
+}
+.lightbox .lightbox-content {
+  position: relative;
+  width: 80%;
+  /* デフォルトで画面幅の 90% */
+  max-width: 1200px;
+  /* 最大幅の制限 */
+  height: auto;
+  /* アスペクト比を保持 */
+}
+.lightbox .close-lightbox {
+  position: absolute;
+  top: 0px;
+  /* ライトボックス内で見えるように調整 */
+  right: -40px;
+  color: #FFF;
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  /* 他の要素より前面に表示 */
+}
+
+#toTopBtn {
+  opacity: 0;
+  /* 初期状態は透明 */
+  visibility: hidden;
+  /* 完全に非表示 */
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  border: 1px solid #3F3F3D;
+  outline: none;
+  color: #3F3F3D;
+  cursor: pointer;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #FFF;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  /* トランジションを追加 */
+}
+
+#toTopBtn.show {
+  opacity: 1;
+  /* 表示 */
+  visibility: visible;
+  /* 表示 */
+}
+
+#toTopBtn:hover {
+  background-color: #3F3F3D;
+  color: #FFF;
+}
+
+/*# sourceMappingURL=work.css.map */

@@ -1,0 +1,9 @@
+{
+    "server": {
+        "baseDir": "./",
+        "routes": {
+            "/about": "about.html",
+            "/contact": "contact.html"
+        }
+    }
+}
