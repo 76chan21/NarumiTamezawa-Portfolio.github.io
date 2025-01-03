@@ -1,0 +1,330 @@
+$main-color: #3F3F3D;
+$bg-color: #FFF;
+$primary-font: "Montserrat", sans-serif;
+$thick-font: 700;
+$reg-font: 500;
+$thin-font: 300;
+$upcase: uppercase;
+$sec-margin-top: 50px;
+$text-font: "Open Sans", sans-serif;
+$text-weight: 300;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==small {
+        @media (max-width: 400px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==medium {
+        @media (max-width: 650px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==large {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+body {
+    background-color: $bg-color;
+    font-family: $primary-font;
+    color: $main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    margin-top: 70px;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include respond-to(medium) {
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    @include respond-to(small) {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* header */
+header {
+    width: 100vw;
+    height: 70px;
+    border-bottom: $main-color 0.5px solid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    font-size: 1em;
+
+    .logo {
+        background-image: url(/assets/img/NT-logo.png);
+        width: 120px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 1vw;
+        margin-top: 0.5vh;
+    }
+
+    nav {
+        display: flex;
+        justify-content: end;
+        width: 50vw;
+        height: 80%;
+        margin-top: 10px;
+        text-transform: $upcase;
+
+        .navSec {
+            display: flex;
+            align-items: center;
+
+            .navItem {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 0px 30px 0px 30px;
+
+                a {
+                    position: relative;
+                }
+
+                a::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    left: 0px;
+                    top: 23px;
+                    border-radius: 5%;
+                    background-color: $main-color;
+                    opacity: 0;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    z-index: -1;
+                }
+
+                a:hover::after {
+                    opacity: 1;
+                    top: 18px;
+
+                }
+
+                a:hover {
+                    font-weight: 700;
+                    transition: font-weight 0.5s ease;
+                }
+            }
+        }
+
+    }
+}
+
+
+a {
+    color: $main-color;
+    font-weight: $reg-font;
+    text-decoration: none;
+}
+
+.secTitle {
+    text-transform: $upcase;
+    font-weight: $thick-font;
+    font-size: 1.7em;
+    margin-bottom: 40px;
+
+    @include respond-to(medium) {
+        margin-bottom: 30px;
+    }
+
+    @include respond-to(small) {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+}
+
+.underHeader {
+    height: 70px;
+    width: 100vw;
+    z-index: 99;
+    position: fixed;
+    background-color: $bg-color;
+}
+
+.burger {
+    display: none;
+    margin-right: 3vw;
+    margin-top: 1vh;
+
+
+    @include respond-to(medium) {
+        display: block;
+    }
+}
+
+.closeBurger {
+    display: none;
+    position: fixed;
+    right: 4vw;
+    top: 4vh;
+    z-index: 500;
+}
+
+.burgerMenu {
+    display: none;
+
+    @include respond-to(medium) {
+        display: block;
+        width: 45vw;
+        height: 100vh;
+        right: -50vw;
+        background-color: $bg-color;
+        position: fixed;
+        z-index: 200;
+        transition: all 0.6s ease;
+        display: flex;
+        justify-content: flex-end;
+        text-transform: $upcase;
+        z-index: 200;
+    }
+
+}
+
+.burgerMenu.slide {
+    right: 0;
+}
+
+
+.navSecB {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 100px 12vw 0 0;
+
+    li {
+        margin-bottom: 20px;
+
+        a {
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            left: 0px;
+            top: 23px;
+            border-radius: 5%;
+            background-color: $main-color;
+            opacity: 0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        a:hover::after {
+            opacity: 1;
+            top: 18px;
+
+        }
+
+        a:hover {
+            font-weight: 700;
+            transition: font-weight 0.5s ease;
+        }
+    }
+}
+
+.burgerBack {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 150;
+    background-color: #3f3f3dbc;
+    opacity: 0;
+    display: none;
+    // transition: all 0.4s ease;
+}
+
+.burgerBack.burgerOpen {
+    display: block;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 650px) {
+    header {
+        justify-content: space-between;
+
+        .logo {
+            margin-left: 3vw;
+        }
+
+        .nav {
+            display: none;
+        }
+    }
+}
+
+.reg-button {
+    margin: 25px 0;
+    border: $main-color 1px solid;
+    color: $main-color;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 50px;
+    background-color: $bg-color;
+    text-transform: $upcase;
+    font-family: $primary-font;
+    font-weight: $thick-font;
+    font-size: 0.9em;
+    transition: background-color 0.2s, color 0.2s ease;
+}
+
+.reg-button:hover {
+    background-color: $main-color;
+    color: $bg-color;
+}
+
+/* footer */
+
+footer {
+    background-color: $bg-color;
+    width: 100vw;
+    height: 8vh;
+    padding: 10px 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+#sns {
+    height: auto;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
