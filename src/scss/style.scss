@@ -327,4 +327,12 @@ footer {
     width: 150px;
     display: flex;
     justify-content: space-between;
+
+    .fa-2xl {
+        transition: color 0.2s ease;
+    }
+
+    .fa-2xl:hover {
+        color: #92928f;
+    }
 }

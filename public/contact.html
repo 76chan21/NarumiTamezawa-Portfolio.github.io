@@ -31,7 +31,9 @@
             <ul class="navSec">
                 <li class="navItem"><a href="works.html">work</a></li>
                 <li class="navItem"><a href="about.html">about</a></li>
-                <li class="navItem"><a href="/asset/Narumi_Resume_2024May.pdf" target="_blank">resume</a></li>
+                <li class="navItem"><a
+                        href="https://drive.google.com/file/d/1T0uPpka7ip1RW_8fdTjQzBVYvrw7wAQ7/view?usp=sharing"
+                        target="_blank">resume</a></li>
                 <li class="navItem"><a href="contact.html">contact</a></li>
             </ul>
         </nav>
@@ -42,7 +44,9 @@
             <ul class="navSecB">
                 <li class="navItem"><a href="works.html">work</a></li>
                 <li class="navItem"><a href="about.html">about</a></li>
-                <li class="navItem"><a href="/asset/Narumi_Resume_2024May.pdf" target="_blank">resume</a></li>
+                <li class="navItem"><a
+                        href="https://drive.google.com/file/d/1T0uPpka7ip1RW_8fdTjQzBVYvrw7wAQ7/view?usp=sharing"
+                        target="_blank">resume</a></li>
                 <li class="navItem"><a href="contact.html">contact</a></li>
             </ul>
         </nav>
@@ -56,7 +60,7 @@
             <h2 class="secTitle">contact</h2>
             <h5>Tell me what I can do for you</h5>
             <figure></figure>
-            <form method="post" action="">
+            <form method="POST" action="https://formspree.io/f/xnnnopar">
                 <div class="formNames">
                     <fieldset>
                         <legend>Firstname *</legend>
@@ -99,12 +103,12 @@
             </form>
         </aside>
 
-        <div id="confirmation">
-            <figure id="confirmationClose" alt="close button"></figure>
-            <div>
-                <figure alt="Rabbit holding a letter"></figure>
-                <p id="confirmationText">
-                </p>
+        <div id="confirm-back">
+            <div id="confirmation">
+                <i class="fa-regular fa-circle-check" id="check-mark"></i>
+                <h3>Thank you!</h3>
+                <p id="confirmationText">Your message has been sent successfully. <br>We'll get back to you soon!</p>
+                <button id="confirmationClose">Close</button>
             </div>
         </div>
     </main>
@@ -123,6 +127,7 @@
 
     <!-- External JS -->
     <script src="/assets/Js/script.js" defer></script>
+    <script src="/assets/Js/contact.js" defer></script>
 </body>
 
 </html>

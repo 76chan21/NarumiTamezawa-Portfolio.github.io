@@ -274,5 +274,11 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+#sns .fa-2xl {
+  transition: color 0.2s ease;
+}
+#sns .fa-2xl:hover {
+  color: #92928f;
+}
 
 /*# sourceMappingURL=style.css.map */
