@@ -17,12 +17,14 @@ main {
   max-width: 1440px;
   margin: 0 auto;
 }
+
 @media (max-width: 650px) {
   .inner {
     max-width: 580px;
     margin: 0 auto;
   }
 }
+
 @media (max-width: 400px) {
   .inner {
     max-width: 360px;
@@ -42,8 +44,9 @@ header {
   z-index: 100;
   font-size: 1em;
 }
+
 header .logo {
-  background-image: url(/assets/img/NT-logo.png);
+  background-image: url(../img/NT-logo.png);
   width: 120px;
   height: 50px;
   background-size: contain;
@@ -52,6 +55,7 @@ header .logo {
   margin-left: 1vw;
   margin-top: 0.5vh;
 }
+
 header nav {
   display: flex;
   justify-content: end;
@@ -60,19 +64,23 @@ header nav {
   margin-top: 10px;
   text-transform: uppercase;
 }
+
 header nav .navSec {
   display: flex;
   align-items: center;
 }
+
 header nav .navSec .navItem {
   display: flex;
   align-items: center;
   height: 100%;
   padding: 0px 30px 0px 30px;
 }
+
 header nav .navSec .navItem a {
   position: relative;
 }
+
 header nav .navSec .navItem a::after {
   content: "";
   position: absolute;
@@ -87,10 +95,12 @@ header nav .navSec .navItem a::after {
   transition: all 0.3s ease;
   z-index: -1;
 }
+
 header nav .navSec .navItem a:hover::after {
   opacity: 1;
   top: 18px;
 }
+
 header nav .navSec .navItem a:hover {
   font-weight: 700;
   transition: font-weight 0.5s ease;
@@ -108,11 +118,13 @@ a {
   font-size: 1.7em;
   margin-bottom: 40px;
 }
+
 @media (max-width: 650px) {
   .secTitle {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 400px) {
   .secTitle {
     font-size: 1.4em;
@@ -133,6 +145,7 @@ a {
   margin-right: 3vw;
   margin-top: 1vh;
 }
+
 @media (max-width: 650px) {
   .burger {
     display: block;
@@ -150,6 +163,7 @@ a {
 .burgerMenu {
   display: none;
 }
+
 @media (max-width: 650px) {
   .burgerMenu {
     display: block;
@@ -177,12 +191,15 @@ a {
   align-items: flex-end;
   padding: 100px 12vw 0 0;
 }
+
 .navSecB li {
   margin-bottom: 20px;
 }
+
 .navSecB li a {
   position: relative;
 }
+
 .navSecB li a::after {
   content: "";
   position: absolute;
@@ -197,10 +214,12 @@ a {
   transition: all 0.3s ease;
   z-index: -1;
 }
+
 .navSecB li a:hover::after {
   opacity: 1;
   top: 18px;
 }
+
 .navSecB li a:hover {
   font-weight: 700;
   transition: font-weight 0.5s ease;
@@ -226,13 +245,16 @@ a {
   header {
     justify-content: space-between;
   }
+
   header .logo {
     margin-left: 3vw;
   }
+
   header .nav {
     display: none;
   }
 }
+
 .reg-button {
   margin: 25px 0;
   border: #3F3F3D 1px solid;
@@ -274,9 +296,11 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
 #sns .fa-2xl {
   transition: color 0.2s ease;
 }
+
 #sns .fa-2xl:hover {
   color: #92928f;
 }

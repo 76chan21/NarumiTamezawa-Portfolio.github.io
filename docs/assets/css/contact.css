@@ -2,19 +2,22 @@
   display: flex;
   width: 100vw;
 }
+
 @media (max-width: 650px) {
   #contact {
     flex-direction: column;
   }
 }
+
 #contact #contactImage {
-  background-image: url(/assets/img/contact.JPEG);
+  background-image: url(../img/contact.JPEG);
   background-size: cover;
   background-position: center;
   height: 700px;
   width: 50vw;
   content: "";
 }
+
 @media (max-width: 650px) {
   #contact #contactImage {
     width: 100vw;
@@ -22,11 +25,13 @@
     background-position: 50% 25%;
   }
 }
+
 #contact aside {
   width: 40vw;
   height: auto;
   padding: 50px 0 0 80px;
 }
+
 @media (max-width: 650px) {
   #contact aside {
     width: 100vw;
@@ -37,6 +42,7 @@
     padding: 50px 0 0 0;
   }
 }
+
 #contact aside .secTitle {
   text-transform: uppercase;
   font-weight: 700;
@@ -44,32 +50,40 @@
   margin-bottom: 10px;
   text-align: left;
 }
+
 #contact aside h5 {
   margin: 10px 0 50px;
 }
+
 #contact aside .formNames {
   display: flex;
 }
+
 #contact aside legend {
   margin-bottom: 5px;
 }
+
 #contact aside #firstname {
   margin-right: 1vw;
   width: 14.5vw;
 }
+
 @media (max-width: 650px) {
   #contact aside #firstname {
     width: 39.5vw;
   }
 }
+
 #contact aside #lastname {
   width: 14.5vw;
 }
+
 @media (max-width: 650px) {
   #contact aside #lastname {
     width: 39.5vw;
   }
 }
+
 #contact aside .input {
   margin-bottom: 15px;
   border: none;
@@ -79,23 +93,28 @@
   height: 30px;
   background-color: transparent;
 }
+
 #contact aside form {
   font-size: 0.9em;
   width: 30vw;
 }
+
 @media (max-width: 650px) {
   #contact aside form {
     width: 80vw;
   }
 }
+
 #contact aside #message {
   height: 70px;
 }
+
 @media (max-width: 650px) {
   #contact aside #submit {
     text-align: center;
   }
 }
+
 #contact aside #submitBtn {
   margin: 25px 0;
   border: #3F3F3D 1px solid;
@@ -108,21 +127,26 @@
   transition: background-color 0.2s, color 0.2s ease;
   text-transform: uppercase;
 }
+
 #contact aside #submitBtn:hover {
   background-color: #3F3F3D;
   color: #FFF;
 }
+
 #contact aside p {
   font-size: 0.9em;
 }
+
 @media (max-width: 650px) {
   #contact aside p {
     text-align: center;
   }
 }
+
 #contact aside form p:last-child {
   margin-top: 10px;
 }
+
 #contact #confirm-back {
   background-color: rgba(63, 63, 61, 0.6431372549);
   position: absolute;
@@ -132,11 +156,13 @@
   justify-content: center;
   padding-top: 200px;
 }
+
 @media (max-width: 650px) {
   #contact #confirm-back {
     padding-top: 100px;
   }
 }
+
 #contact #confirm-back #confirmation {
   width: 600px;
   height: 370px;
@@ -150,25 +176,30 @@
   z-index: 102;
   transition: all 0.5s ease;
 }
+
 @media (max-width: 650px) {
   #contact #confirm-back #confirmation {
     width: 80vw;
     height: 45vh;
   }
 }
+
 #contact #confirm-back #confirmation #check-mark {
   font-size: 80px;
   margin-bottom: 20px;
 }
+
 #contact #confirm-back #confirmation h3 {
   font-weight: 700;
   font-size: 1.7em;
   margin-bottom: 30px;
 }
+
 #contact #confirm-back #confirmation p {
   line-height: 1.3;
   margin-bottom: 30px;
 }
+
 #contact #confirm-back #confirmation #confirmationClose {
   border: #3F3F3D 1px solid;
   color: #3F3F3D;
@@ -180,6 +211,7 @@
   transition: background-color 0.2s, color 0.2s ease;
   text-transform: uppercase;
 }
+
 #contact #confirm-back #confirmation #confirmationClose:hover {
   background-color: #3F3F3D;
   color: #FFF;
