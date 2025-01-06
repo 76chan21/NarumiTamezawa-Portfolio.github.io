@@ -9,20 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // フォームデータを取得
         const formData = new FormData(form);
-        const data = {
-            firstname: formData.get("firstname"),
-            lastname: formData.get("lastname"),
-            emailaddress: formData.get("emailaddress"),
-            subject: formData.get("subject"),
-            message: formData.get("message"),
-        };
 
-        // Formspree APIに送信
+        // デバッグ用: 送信データを確認
+        for (const pair of formData.entries()) {
+            console.log(pair[0] + ": " + pair[1]);
+        }
+
         // Formspree APIに送信
         try {
             const response = await fetch("https://formspree.io/f/mvggvdgo", {
                 method: "POST",
-                body: new FormData(form), // FormDataをそのまま送信
+                body: formData, // FormDataをそのまま送信
             });
 
             if (response.ok) {
