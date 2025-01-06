@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server --baseDir=\"public\"",
-    "watch": "sass --watch src/scss:public/assets/css",
+    "dev": "lite-server --baseDir=\"docs\"",
+    "watch": "sass --watch src/scss:docs/assets/css",
     "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "author": "",
-  "private": true,
   "description": "",
   "devDependencies": {
     "concurrently": "^9.0.1",

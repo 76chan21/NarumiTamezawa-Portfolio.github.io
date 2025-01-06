@@ -129,22 +129,22 @@ h2 {
   /* 画像をコンテナに収める（必要に応じて調整） */
 }
 .article-wrap .work #naturcycle-thumb {
-  background-image: url(/assets/img/NaturCycle.png);
+  background-image: url(../img/NaturCycle.png);
   background-size: cover;
   background-position: center;
 }
 .article-wrap .work #fivefall-thumb {
-  background-image: url(/assets/img/5Senses-01.png);
+  background-image: url(../img/5Senses-01.png);
   background-size: cover;
   background-position: center;
 }
 .article-wrap .work #hannah-thumb {
-  background-image: url(/assets/img/血みどろ_サムネ.JPG);
+  background-image: url(../img/hannah-thumb.JPG);
   background-size: cover;
   background-position: center;
 }
 .article-wrap .work #tomoshi-thumb {
-  background-image: url(/assets/img/エンドカード2022_3.png);
+  background-image: url(../img/tomosi-endcard.png);
   background-size: cover;
   background-position: center;
 }
