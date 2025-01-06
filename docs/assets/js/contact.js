@@ -18,13 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Formspree APIに送信
+        // Formspree APIに送信
         try {
             const response = await fetch("https://formspree.io/f/mvggvdgo", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
+                body: new FormData(form), // FormDataをそのまま送信
             });
 
             if (response.ok) {
