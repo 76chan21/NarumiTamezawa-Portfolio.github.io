@@ -55,15 +55,15 @@ $text-weight: 300;
 
     #describe {
         margin-top: $sec-margin-top;
-        text-align: center;
         width: 45%;
         font-family: $text-font;
         font-weight: $text-weight;
+        font-size: 1.2em;
         line-height: 1.4;
 
         @include respond-to(medium) {
             width: 80vw;
-            font-size: 0.8em;
+            font-size: 1em;
         }
     }
 

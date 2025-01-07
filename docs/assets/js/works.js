@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // `data-category` をスペース区切りで分割して配列に変換
                 const categories = work.getAttribute('data-category').split(' ');
 
-                if (category === 'all' || categories.includes(category)) {
+                // 複数カテゴリに対応する条件式を修正
+                if (category === 'all' || categories.some(cat => cat === category)) {
                     work.style.display = 'flex';
                 } else {
                     work.style.display = 'none';
@@ -46,14 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let embedUrl = '';
 
             // 動画タイプに応じて埋め込みURLを生成
-            if (videoType === 'normal') {
-                embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            } else if (videoType === 'short') {
+            if (videoType === 'normal' || videoType === 'short') {
                 embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
             } else if (videoType === 'playlist') {
                 embedUrl = `https://www.youtube.com/embed/videoseries?list=${videoId}&autoplay=1`;
             }
-
             youtubePlayer.src = embedUrl;
             lightbox.style.display = 'flex';
         });

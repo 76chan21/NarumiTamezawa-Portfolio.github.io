@@ -51,6 +51,7 @@ h2 {
   border: none;
   background: none;
   font-family: "Montserrat", sans-serif;
+  color: #3F3F3D;
   font-weight: 500;
   font-size: 1.1em;
   margin-top: 10px;
@@ -219,6 +220,11 @@ h2 {
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+@media (max-width: 650px) {
+  .thumbnail .play-icon {
+    padding: 15px 19px 15px 22px;
+  }
 }
 
 .thumbnail:hover .play-icon {

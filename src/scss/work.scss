@@ -85,6 +85,7 @@ h2 {
         border: none;
         background: none;
         font-family: $primary-font;
+        color: $main-color;
         font-weight: $reg-font;
         font-size: 1.1em;
         margin-top: 10px;
@@ -307,6 +308,10 @@ h2 {
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.3s ease;
+
+    @include respond-to(medium) {
+        padding: 15px 19px 15px 22px;
+    }
 }
 
 .thumbnail:hover .play-icon {

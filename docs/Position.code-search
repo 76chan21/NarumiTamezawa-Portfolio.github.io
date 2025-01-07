@@ -1,0 +1,438 @@
+# Query: Position
+# ContextLines: 1
+
+106 results - 12 files
+
+docs/index.html:
+  267                  <br><br>
+  268:                 Position:<br>
+  269                  director, editor...
+
+  280                  <br><br>
+  281:                 Position:<br>
+  282                  director, editor...
+
+  297                  <br><br>
+  298:                 Position:<br>
+  299                  director, editor...
+
+docs/works.html:
+   96                          <br><br>
+   97:                         <span>Role:</span><br>
+   98                          Direction, Editing, Colour grading
+
+  133                          <br><br>
+  134:                         <span>Role:</span><br>
+  135                          Direction, Videography, Editing, Thumbnail design
+
+  172                          <br><br>
+  173:                         <span>Role:</span><br>
+  174                          Direction, Editing, Motion design
+
+  209                          <br><br>
+  210:                         <span>Position:</span><br>
+  211                          Direction, Editing, Motion design
+
+  249                          <br><br>
+  250:                         <span>Position:</span><br>
+  251                          Subject Coordination, Project management, Team lead, Direction, Eding, Videography, Motion
+
+  289                          <br><br>
+  290:                         <span>Position:</span><br>
+  291                          Direction, Editing, Videography
+
+  326                          <br><br>
+  327:                         <span>Position:</span><br>
+  328                          Motion design
+
+  363                          <br><br>
+  364:                         <span>Position:</span><br>
+  365                          Offline editing
+
+  401                          <br><br>
+  402:                         <span>Position:</span><br>
+  403                          Offline editing
+
+  439                          <br><br>
+  440:                         <span>Position:</span><br>
+  441                          Offline editing
+
+  477                          <br><br>
+  478:                         <span>Position:</span><br>
+  479                          Offline editing
+
+  515                          <br><br>
+  516:                         <span>Position:</span><br>
+  517                          Direction, Videography, Editing, Motion design
+
+  553                          <br><br>
+  554:                         <span>Position:</span><br>
+  555                          Videography, Editing
+
+  590                          <br><br>
+  591:                         <span>Position:</span><br>
+  592                          Direction, Videography, Editing, Motion design
+
+  628                          <br><br>
+  629:                         <span>Position:</span><br>
+  630                          Storywiriting, Direction, Editing, Props managing
+
+  670                          <br><br>
+  671:                         <span>Position:</span><br>
+  672                          Direction, Videography, Editing, Motion design, Thumbnail design
+
+  701                          <br><br>
+  702:                         <span>Position:</span><br>
+  703                          Editiing, Thumbnail design, Sound design
+
+  732                          <br><br>
+  733:                         <span>Position:</span><br>
+  734                          Graphic design, Logo design, UX/UI research, User interview, UX/UI design
+
+  761                          <br><br>
+  762:                         <span>Position:</span><br>
+  763                          Photography, Editing, Graphic design
+
+  799                          <br><br>
+  800:                         <span>Position:</span><br>
+  801                          Motion design, Sound design, Pre production
+
+  839                          <br><br>
+  840:                         <span>Position:</span><br>
+  841                          Subject Coordination, Direction, Eding, Videography, Interview
+
+docs/assets/css/about.css:
+  11    background-repeat: no-repeat;
+  12:   background-position: center;
+  13  }
+
+docs/assets/css/contact.css:
+   12    background-size: cover;
+   13:   background-position: center;
+   14    height: 700px;
+
+   21      height: 30vh;
+   22:     background-position: 50% 25%;
+   23    }
+
+  127    background-color: rgba(63, 63, 61, 0.6431372549);
+  128:   position: absolute;
+  129    width: 100%;
+
+  144    background-color: #FFF;
+  145:   position: absolute;
+  146    text-align: center;
+
+docs/assets/css/main.css:
+   19    /* 動画を枠に収めつつトリミング */
+   20:   position: relative;
+   21    z-index: 1;
+
+   81    background-color: #3F3F3D;
+   82:   position: relative;
+   83    display: flex;
+
+  108    /* 中央揃え */
+  109:   position: relative;
+  110    /* ホバーエフェクト用に必要 */
+
+  126  .section #latest-work .latest .thumbnail {
+  127:   position: relative;
+  128    /* 任意 */
+
+  131  .section #latest-work .latest .thumbnail .play-icon {
+  132:   position: absolute;
+  133    top: 50%;
+
+  148    display: none;
+  149:   position: fixed;
+  150    top: 0;
+
+  168  .section #latest-work .latest .lightbox .lightbox-content {
+  169:   position: relative;
+  170    width: 80%;
+
+  177  .section #latest-work .latest .lightbox .close-lightbox {
+  178:   position: absolute;
+  179    top: 0px;
+
+  195    padding-top: 20px;
+  196:   position: absolute;
+  197    bottom: 0;
+
+docs/assets/css/style.css:
+   42    align-items: center;
+   43:   position: fixed;
+   44    z-index: 100;
+
+   53    background-repeat: no-repeat;
+   54:   background-position: center;
+   55    margin-left: 1vw;
+
+   80  header nav .navSec .navItem a {
+   81:   position: relative;
+   82  }
+
+   85    content: "";
+   86:   position: absolute;
+   87    height: 1px;
+
+  138    z-index: 99;
+  139:   position: fixed;
+  140    background-color: #FFF;
+
+  156    display: none;
+  157:   position: fixed;
+  158    right: 4vw;
+
+  173      background-color: #FFF;
+  174:     position: fixed;
+  175      z-index: 200;
+
+  199  .navSecB li a {
+  200:   position: relative;
+  201  }
+
+  204    content: "";
+  205:   position: absolute;
+  206    height: 1px;
+
+  231    height: 100vh;
+  232:   position: fixed;
+  233    z-index: 150;
+
+docs/assets/css/work.css:
+   23    font-weight: 500;
+   24:   position: relative;
+   25  }
+
+   49  #category .filter-btn {
+   50:   position: relative;
+   51    border: none;
+
+   59    content: "";
+   60:   position: absolute;
+   61    height: 1px;
+
+  113    /* 中央揃え */
+  114:   position: relative;
+  115    /* ホバーエフェクト用に必要 */
+
+  133    background-size: cover;
+  134:   background-position: center;
+  135  }
+
+  138    background-size: cover;
+  139:   background-position: center;
+  140  }
+
+  143    background-size: cover;
+  144:   background-position: center;
+  145  }
+
+  148    background-size: cover;
+  149:   background-position: center;
+  150  }
+
+  156  .article-wrap .work .otherwork {
+  157:   position: relative;
+  158  }
+  159  .article-wrap .work .channel {
+  160:   position: relative;
+  161  }
+  162  .article-wrap .work .hoverover {
+  163:   position: absolute;
+  164    display: flex;
+
+  204  .thumbnail {
+  205:   position: relative;
+  206    /* 任意 */
+
+  210  .thumbnail .play-icon {
+  211:   position: absolute;
+  212    top: 50%;
+
+  230    display: none;
+  231:   position: fixed;
+  232    top: 0;
+
+  250  .lightbox .lightbox-content {
+  251:   position: relative;
+  252    width: 80%;
+
+  259  .lightbox .close-lightbox {
+  260:   position: absolute;
+  261    top: 0px;
+
+  279    /* 完全に非表示 */
+  280:   position: fixed;
+  281    bottom: 20px;
+
+src/scss/about.scss:
+  45              background-repeat: no-repeat;
+  46:             background-position: center;
+  47  
+
+src/scss/contact.scss:
+   43          background-size: cover;
+   44:         background-position: center;
+   45          height: 700px;
+
+   51              height: 30vh;
+   52:             background-position: 50% 25%;
+   53          }
+
+  169          background-color: #3f3f3da4;
+  170:         position: absolute;
+  171          width: 100%;
+
+  185              background-color: $bg-color;
+  186:             position: absolute;
+  187              text-align: center;
+
+src/scss/main.scss:
+   50          /* 動画を枠に収めつつトリミング */
+   51:         position: relative;
+   52          z-index: 1;
+
+  110              background-color: #3F3F3D;
+  111:             position: relative;
+  112              display: flex;
+
+  138                  /* 中央揃え */
+  139:                 position: relative;
+  140                  /* ホバーエフェクト用に必要 */
+
+  158              .thumbnail {
+  159:                 position: relative;
+  160                  /* 任意 */
+
+  164              .thumbnail .play-icon {
+  165:                 position: absolute;
+  166                  top: 50%;
+
+  184                  display: none;
+  185:                 position: fixed;
+  186                  top: 0;
+
+  205                  .lightbox-content {
+  206:                     position: relative;
+  207                      width: 80%;
+
+  215                  .close-lightbox {
+  216:                     position: absolute;
+  217                      top: 0px;
+
+  236              padding-top: 20px;
+  237:             position: absolute;
+  238              bottom: 0;
+
+src/scss/style.scss:
+   72      align-items: center;
+   73:     position: fixed;
+   74      z-index: 100;
+
+   82          background-repeat: no-repeat;
+   83:         background-position: center;
+   84          margin-left: 1vw;
+
+  106                  a {
+  107:                     position: relative;
+  108                  }
+
+  111                      content: '';
+  112:                     position: absolute;
+  113                      height: 1px;
+
+  168      z-index: 99;
+  169:     position: fixed;
+  170      background-color: $bg-color;
+
+  185      display: none;
+  186:     position: fixed;
+  187      right: 4vw;
+
+  200          background-color: $bg-color;
+  201:         position: fixed;
+  202          z-index: 200;
+
+  226          a {
+  227:             position: relative;
+  228          }
+
+  231              content: '';
+  232:             position: absolute;
+  233              height: 1px;
+
+  261      height: 100vh;
+  262:     position: fixed;
+  263      z-index: 150;
+
+src/scss/work.scss:
+   54      font-weight: $reg-font;
+   55:     position: relative;
+   56  
+
+   83      .filter-btn {
+   84:         position: relative;
+   85          border: none;
+
+   94          content: '';
+   95:         position: absolute;
+   96          height: 1px;
+
+  152              /* 中央揃え */
+  153:             position: relative;
+  154              /* ホバーエフェクト用に必要 */
+
+  173              background-size: cover;
+  174:             background-position: center;
+  175          }
+
+  179              background-size: cover;
+  180:             background-position: center;
+  181          }
+
+  185              background-size: cover;
+  186:             background-position: center;
+  187          }
+
+  191              background-size: cover;
+  192:             background-position: center;
+  193          }
+
+  202          .otherwork {
+  203:             position: relative;
+  204          }
+
+  206          .channel {
+  207:             position: relative;
+  208          }
+
+  210          .hoverover {
+  211:             position: absolute;
+  212              display: flex;
+
+  292  .thumbnail {
+  293:     position: relative;
+  294      /* 任意 */
+
+  298  .thumbnail .play-icon {
+  299:     position: absolute;
+  300      top: 50%;
+
+  318      display: none;
+  319:     position: fixed;
+  320      top: 0;
+
+  339      .lightbox-content {
+  340:         position: relative;
+  341          width: 80%;
+
+  349      .close-lightbox {
+  350:         position: absolute;
+  351          top: 0px;
+
+  370      /* 完全に非表示 */
+  371:     position: fixed;
+  372      bottom: 20px;

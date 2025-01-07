@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 #about .hero #about-hero {
   width: 100vw;
   height: 600px;
@@ -12,33 +11,28 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 @media (max-width: 650px) {
   #about .hero #about-hero {
     height: 56.25vw;
   }
 }
-
 #about #describe {
   margin-top: 50px;
-  text-align: center;
   width: 45%;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  font-size: 1.2em;
   line-height: 1.4;
 }
-
 @media (max-width: 650px) {
   #about #describe {
     width: 80vw;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
-
 #about div {
   margin-top: 30px;
 }
-
 @media (max-width: 650px) {
   #about div {
     display: flex;
@@ -46,12 +40,10 @@
     align-items: center;
   }
 }
-
 #about div p {
   display: inline;
   margin-right: 30px;
 }
-
 @media (max-width: 650px) {
   #about div p {
     display: block;
