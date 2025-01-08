@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 動画タイプに応じて埋め込みURLを生成
             if (videoType === 'normal' || videoType === 'short') {
-                embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
             } else if (videoType === 'playlist') {
-                embedUrl = `https://www.youtube.com/embed/videoseries?list=${videoId}&autoplay=1`;
+                embedUrl = `https://www.youtube.com/embed/videoseries?list=${videoId}&autoplay=1&mute=1`;
             }
             youtubePlayer.src = embedUrl;
             lightbox.style.display = 'flex';

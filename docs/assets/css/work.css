@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
   }
 }
 
@@ -27,6 +26,7 @@ h2 {
 }
 @media (max-width: 650px) {
   #category {
+    justify-content: flex-start;
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
@@ -54,8 +54,11 @@ h2 {
   color: #3F3F3D;
   font-weight: 500;
   font-size: 1.1em;
-  margin-top: 10px;
-  margin-right: 45px;
+}
+@media (max-width: 650px) {
+  #category .filter-btn {
+    margin-right: 30px;
+  }
 }
 #category .filter-btn:last-child {
   margin-right: 0;
@@ -65,7 +68,7 @@ h2 {
   position: absolute;
   height: 1px;
   width: 100%;
-  left: 0px;
+  left: 0;
   top: 28px;
   border-radius: 5%;
   background-color: #3F3F3D;

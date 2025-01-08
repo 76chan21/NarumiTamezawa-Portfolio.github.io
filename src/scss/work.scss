@@ -38,7 +38,6 @@ $text-weight: 300;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100vw;
     }
 }
 
@@ -50,13 +49,14 @@ h2 {
 
 #category {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; // デスクトップでは均等配置
     margin-bottom: 50px;
     text-transform: $upcase;
     font-weight: $reg-font;
     position: relative;
 
     @include respond-to(medium) {
+        justify-content: flex-start; // モバイルでは左寄せ
         overflow-x: auto;
         white-space: nowrap;
         width: 100%;
@@ -70,15 +70,15 @@ h2 {
     }
 
     &::-webkit-scrollbar {
-        display: none;
+        display: none; // スクロールバーを非表示
     }
 
     & {
-        scrollbar-width: none;
+        scrollbar-width: none; // Firefox用にスクロールバー非表示
     }
 
     .filter-btn {
-        flex-shrink: 0;
+        flex-shrink: 0; // 子要素の幅を固定
         position: relative;
         border: none;
         background: none;
@@ -86,12 +86,14 @@ h2 {
         color: $main-color;
         font-weight: $reg-font;
         font-size: 1.1em;
-        margin-top: 10px;
-        margin-right: 45px; // gapの代わり
+
+        @include respond-to(medium) {
+            margin-right: 30px; // モバイルでは余白を小さく調整
+        }
     }
 
     .filter-btn:last-child {
-        margin-right: 0;
+        margin-right: 0; // 最後のボタンに右余白を適用しない
     }
 
     .filter-btn::after {
@@ -99,7 +101,7 @@ h2 {
         position: absolute;
         height: 1px;
         width: 100%;
-        left: 0px;
+        left: 0;
         top: 28px;
         border-radius: 5%;
         background-color: $main-color;
