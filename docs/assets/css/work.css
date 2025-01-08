@@ -36,9 +36,9 @@ h2 {
     /* タッチスクリーンのスムーズスクロール対応 */
     scrollbar-width: 0.1px;
     /* Firefoxでスクロールバーを非表示 */
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-bottom: #3F3F3D 0.5px solid;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow-y: hidden;
   }
 }
