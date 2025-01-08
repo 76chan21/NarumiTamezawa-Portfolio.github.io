@@ -3,40 +3,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const confirmationPopup = document.getElementById("confirm-back");
     const confirmationClose = document.getElementById("confirmationClose");
 
-    // ハンドリング送信イベント
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // ページのリロードを防ぐ
+    // フォーム送信イベントをハンドリング
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // フォームのデフォルト動作を防止
 
-        // フォームデータを取得
-        const formData = new FormData(form);
-
-        // デバッグ用: 送信データを確認
-        for (const pair of formData.entries()) {
-            console.log(pair[0] + ": " + pair[1]);
-        }
-
-        // Formspree APIに送信
         try {
+            // reCAPTCHAトークンを取得
+            const captchaToken = await grecaptcha.execute("6LcATLEqAAAAAAMuTLb64DkVB5z7bFSWyWVF8jHD", { action: "submit" });
+
+            // フォームデータを準備
+            const formData = new FormData(form);
+            formData.append("g-recaptcha-response", captchaToken); // reCAPTCHAトークンを追加
+
+            // Formspreeに送信
             const response = await fetch("https://formspree.io/f/mvggvdgo", {
                 method: "POST",
-                body: formData, // FormDataをそのまま送信
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
             });
 
             if (response.ok) {
-                // 成功時にポップアップを表示
-                confirmationPopup.style.display = "flex";
+                confirmationPopup.style.display = "flex"; // サクセスメッセージを表示
+                form.reset(); // フォームをリセット
             } else {
-                alert("Sending message failed. Please try again.");
+                // エラーの詳細を取得して表示
+                const errorData = await response.json();
+                console.error("Error Details:", errorData);
+                alert("Failed to send the message. Please check your inputs or try again later.");
             }
         } catch (error) {
-            console.error("エラー:", error);
-            alert("Sending message failed. Please try again.");
+            console.error("Error:", error);
+            alert("An unexpected error occurred. Please try again later.");
         }
     });
 
-    // ポップアップを閉じる
+    // ポップアップを閉じるイベント
     confirmationClose.addEventListener("click", () => {
-        confirmationPopup.style.display = "none";
-        form.reset(); // フォームをリセット
+        confirmationPopup.style.display = "none"; // ポップアップを非表示
     });
 });
