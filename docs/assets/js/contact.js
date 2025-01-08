@@ -7,10 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault(); // フォームのデフォルト動作を防止
 
-        try {
-            // reCAPTCHAトークンを取得
-            const captchaToken = await grecaptcha.execute("6LcATLEqAAAAAAMuTLb64DkVB5z7bFSWyWVF8jHD", { action: "submit" });
+        // reCAPTCHAトークンを取得
+        const captchaToken = grecaptcha.getResponse(); // v2ではこれを使用
 
+        // トークンが空でないことを確認
+        if (!captchaToken) {
+            alert("Please complete the CAPTCHA.");
+            return;
+        }
+
+        try {
             // フォームデータを準備
             const formData = new FormData(form);
             formData.append("g-recaptcha-response", captchaToken); // reCAPTCHAトークンを追加

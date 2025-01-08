@@ -11,7 +11,7 @@
   background-image: url(../img/contact.JPEG);
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 720px;
   width: 50vw;
   content: "";
 }
@@ -45,7 +45,7 @@
   text-align: left;
 }
 #contact aside h5 {
-  margin: 10px 0 50px;
+  margin: 10px 0 30px;
 }
 #contact aside .formNames {
   display: flex;
@@ -70,7 +70,11 @@
     width: 39.5vw;
   }
 }
-#contact aside .input {
+#contact aside form {
+  font-size: 0.9em;
+  width: 30vw;
+}
+#contact aside form .input {
   margin-bottom: 15px;
   border: none;
   border-bottom: #3F3F3D 0.5px solid;
@@ -79,13 +83,17 @@
   height: 30px;
   background-color: transparent;
 }
-#contact aside form {
-  font-size: 0.9em;
-  width: 30vw;
+@media (max-width: 650px) {
+  #contact aside form .form {
+    width: 100%;
+  }
 }
 @media (max-width: 650px) {
   #contact aside form {
     width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 #contact aside #message {
@@ -119,6 +127,10 @@
   #contact aside p {
     text-align: center;
   }
+}
+#contact aside .g-recaptcha {
+  margin-top: 20px;
+  width: 304px;
 }
 #contact aside form p:last-child {
   margin-top: 10px;
