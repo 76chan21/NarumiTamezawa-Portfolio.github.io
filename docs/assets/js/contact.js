@@ -1,3 +1,11 @@
+let grecaptchaLoaded = false;
+
+// reCAPTCHAが正常にロードされたことを示すフラグ
+function grecaptchaReady() {
+    grecaptchaLoaded = true;
+}
+
+// DOMが完全に読み込まれたらフォーム送信の処理を行う
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const confirmationPopup = document.getElementById("confirm-back");
@@ -6,6 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // フォーム送信イベントをハンドリング
     form.addEventListener("submit", async (e) => {
         e.preventDefault(); // フォームのデフォルト動作を防止
+
+        // reCAPTCHAが読み込まれていない場合はエラーメッセージを表示
+        if (!grecaptchaLoaded) {
+            alert("reCAPTCHA is still loading. Please try again later.");
+            return;
+        }
 
         // reCAPTCHAトークンを取得
         const captchaToken = grecaptcha.getResponse(); // v2ではこれを使用
