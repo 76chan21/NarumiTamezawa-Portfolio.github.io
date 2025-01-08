@@ -34,7 +34,7 @@ h2 {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: #3F3F3D 0.5px solid;
     margin-bottom: 20px;
   }
