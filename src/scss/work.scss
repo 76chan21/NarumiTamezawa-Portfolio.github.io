@@ -57,30 +57,26 @@ h2 {
     @include respond-to(medium) {
         overflow-x: auto;
         white-space: nowrap;
-        gap: 45px;
-        width: 94vw;
+        width: 100%;
         height: 19.5px;
         scroll-behavior: smooth;
-        /* スムーズスクロール */
         -webkit-overflow-scrolling: touch;
-        /* タッチスクリーンのスムーズスクロール対応 */
-        scrollbar-width: 0.1px;
-        /* Firefoxでスクロールバーを非表示 */
+        overflow-y: hidden;
         padding-bottom: 20px;
         border-bottom: $main-color 0.5px solid;
         margin-bottom: 20px;
-        overflow-y: hidden;
-
-
     }
 
-
-    .filter-container::-webkit-scrollbar {
+    &::-webkit-scrollbar {
         display: none;
-        /* Webkit系ブラウザでスクロールバーを非表示 */
+    }
+
+    & {
+        scrollbar-width: none;
     }
 
     .filter-btn {
+        flex-shrink: 0;
         position: relative;
         border: none;
         background: none;
@@ -89,6 +85,11 @@ h2 {
         font-weight: $reg-font;
         font-size: 1.1em;
         margin-top: 10px;
+        margin-right: 45px; // gapの代わり
+    }
+
+    .filter-btn:last-child {
+        margin-right: 0;
     }
 
     .filter-btn::after {
@@ -109,7 +110,6 @@ h2 {
     .filter-btn:hover::after {
         opacity: 1;
         top: 24px;
-
     }
 
     .filter-btn:hover {
@@ -117,6 +117,7 @@ h2 {
         transition: font-weight 0.5s ease;
     }
 }
+
 
 .article-wrap {
     display: flex;

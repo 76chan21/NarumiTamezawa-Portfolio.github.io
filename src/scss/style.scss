@@ -179,6 +179,10 @@ a {
     @include respond-to(medium) {
         display: block;
     }
+
+    @include respond-to(small) {
+        display: block;
+    }
 }
 
 .closeBurger {

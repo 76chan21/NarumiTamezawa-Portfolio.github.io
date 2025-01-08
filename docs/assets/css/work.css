@@ -27,26 +27,24 @@ h2 {
   #category {
     overflow-x: auto;
     white-space: nowrap;
-    gap: 45px;
-    width: 94vw;
+    width: 100%;
     height: 19.5px;
     scroll-behavior: smooth;
-    /* スムーズスクロール */
     -webkit-overflow-scrolling: touch;
-    /* タッチスクリーンのスムーズスクロール対応 */
-    scrollbar-width: 0.1px;
-    /* Firefoxでスクロールバーを非表示 */
+    overflow-y: hidden;
     padding-bottom: 20px;
     border-bottom: #3F3F3D 0.5px solid;
     margin-bottom: 20px;
-    overflow-y: hidden;
   }
 }
-#category .filter-container::-webkit-scrollbar {
+#category::-webkit-scrollbar {
   display: none;
-  /* Webkit系ブラウザでスクロールバーを非表示 */
+}
+#category {
+  scrollbar-width: none;
 }
 #category .filter-btn {
+  flex-shrink: 0;
   position: relative;
   border: none;
   background: none;
@@ -55,6 +53,10 @@ h2 {
   font-weight: 500;
   font-size: 1.1em;
   margin-top: 10px;
+  margin-right: 45px;
+}
+#category .filter-btn:last-child {
+  margin-right: 0;
 }
 #category .filter-btn::after {
   content: "";
