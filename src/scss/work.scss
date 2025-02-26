@@ -92,6 +92,11 @@ h2 {
         }
     }
 
+    .fa-arrow-up-right-from-square {
+        font-size: 0.8em;
+        margin-left: 3px;
+    }
+
     .filter-btn:last-child {
         margin-right: 0; // 最後のボタンに右余白を適用しない
     }
@@ -117,6 +122,43 @@ h2 {
     }
 
     .filter-btn:hover {
+        font-weight: 700;
+        transition: font-weight 0.5s ease;
+    }
+
+    .pf-btn {
+        flex-shrink: 0; // 子要素の幅を固定
+        position: relative;
+        border: none;
+        background: none;
+        font-family: $primary-font;
+        color: $main-color;
+        font-weight: $reg-font;
+        font-size: 1.1em;
+        margin-right: 0;
+    }
+
+    .pf-btn::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 28px;
+        border-radius: 5%;
+        background-color: $main-color;
+        opacity: 0;
+        font-weight: $thick-font;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    .pf-btn:hover::after {
+        opacity: 1;
+        top: 24px;
+    }
+
+    .pf-btn:hover {
         font-weight: 700;
         transition: font-weight 0.5s ease;
     }
