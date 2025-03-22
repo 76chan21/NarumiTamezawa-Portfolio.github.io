@@ -31,23 +31,23 @@ $text-weight: 300;
 
 #about {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 
     .hero {
         // background-color: $main-color;
 
         #about-hero {
-            width: 100vw;
-            height: 600px;
-            background-image: url(../img/about-hero.png);
-            background-size: contain;
+            width: 40vw;
+            height: 700px;
+            background-image: url(../img/IMG_3626-fixed.png);
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
 
-            @include respond-to(medium) {
-                height: calc(100vw * 0.5625);
-            }
+            // @include respond-to(medium) {
+            //     height: calc(100vw * 0.5625);
+            // }
         }
     }
 
@@ -55,10 +55,10 @@ $text-weight: 300;
 
     #describe {
         margin-top: $sec-margin-top;
-        width: 45%;
+        width: 40%;
         font-family: $text-font;
         font-weight: $text-weight;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 1.4;
 
         @include respond-to(medium) {

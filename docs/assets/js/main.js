@@ -37,3 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        const heroVideo = document.getElementById('heroVideo');
+        if (heroVideo) {
+            heroVideo.play().then(() => {
+                heroVideo.classList.add('show');
+            }).catch(error => {
+                console.log("自動再生に失敗しました:", error);
+            });
+        }
+    }, 1000);
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // 2.5秒後にローディング画面をフェードアウト
+//     setTimeout(function () {
+//         document.getElementById('loader').style.opacity = '0';
+//         setTimeout(function () {
+//             document.getElementById('loader').style.display = 'none';
+//             document.getElementById('content').classList.remove('hidden');
+//         }, 3000); // フェードアウトの遅延
+//     }, 5000);
+// });

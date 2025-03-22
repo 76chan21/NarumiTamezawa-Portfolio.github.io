@@ -1,27 +1,22 @@
 #about {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 #about .hero #about-hero {
-  width: 100vw;
-  height: 600px;
-  background-image: url(../img/about-hero.png);
-  background-size: contain;
+  width: 40vw;
+  height: 700px;
+  background-image: url(../img/IMG_3626-fixed.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-}
-@media (max-width: 650px) {
-  #about .hero #about-hero {
-    height: 56.25vw;
-  }
+  background-position: top;
 }
 #about #describe {
   margin-top: 50px;
-  width: 45%;
+  width: 40%;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.4;
 }
 @media (max-width: 650px) {

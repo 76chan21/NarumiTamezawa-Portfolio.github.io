@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/about.css">
 
+    <!-- JS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -54,11 +57,11 @@
     <div class="burgerBack"></div>
     <div class="underHeader"></div>
 
-    <main id="about">
-        <section class="hero">
+    <main id="about" class="inner">
+        <section class="hero" data-aos="fade-right">
             <figure id="about-hero"></figure>
         </section>
-        <section id="describe">
+        <section id="describe" data-aos="fade-left">
             <p>Hello, I'm Narumi, a Visual Storyteller and Content Creator based in Toronto, Canada.
                 With 6 years of experience in the video industry, I am currently pursuing Interactive Media Design at
                 Seneca Polytechnic. <br>
@@ -84,16 +87,17 @@
                 pursuits with
                 weekends filled with adventures with friends.
             </p>
+            <div>
+                <p>Wanna know more details?</p>
+
+                <a href="https://www.figma.com/proto/vYaArAhBa8YApWsutDycxZ/Narumi-Resume?page-id=380%3A39&node-id=380-40&viewport=328%2C269%2C0.87&t=oqWZ1zzZNSP7dqRy-1&scaling=min-zoom&content-scaling=fixed"
+                    target="_blank">
+                    <button class="reg-button">see Resume</button>
+                </a>
+
+            </div>
         </section>
-        <div>
-            <p>Wanna know more details?</p>
 
-            <a href="https://www.figma.com/proto/vYaArAhBa8YApWsutDycxZ/Narumi-Resume?page-id=380%3A39&node-id=380-40&viewport=328%2C269%2C0.87&t=oqWZ1zzZNSP7dqRy-1&scaling=min-zoom&content-scaling=fixed"
-                target="_blank">
-                <button class="reg-button">see Resume</button>
-            </a>
-
-        </div>
     </main>
 
     <footer>
@@ -110,6 +114,7 @@
 
     <!-- External JS -->
     <script src="./assets/js/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

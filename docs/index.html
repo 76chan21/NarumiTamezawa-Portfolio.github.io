@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- JS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -21,6 +25,12 @@
 </head>
 
 <body>
+
+    <!-- <div id="loader">
+        <figure class="logo" id="loadingLogo" alt="narumi logo"></figure>
+    </div>
+
+    <div id="content" class="hidden"> -->
     <header class="inner">
         <a href="index.html">
             <figure class="logo" id="headLogo" alt="narumi logo"></figure>
@@ -55,12 +65,12 @@
 
     <main id="home">
         <section id="hero">
-            <video autoplay muted playsinline>
+            <video id="heroVideo" muted playsinline>
                 <source src="assets/video/hero.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
-        <section class="inner section" id="reel">
+        <section class="inner section" id="reel" data-aos="fade-up" data-aos-delay="3000">
             <h2 class="secTitle">Show reel</h2>
 
             <iframe id="showreel" width="560" height="315"
@@ -69,7 +79,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
-        <section class="inner section">
+        <section class="inner section" data-aos="fade-up" data-aos-delay="500">
             <h2 class="secTitle">Latest work</h2>
             <div id="latest-work">
 
@@ -302,11 +312,12 @@
         </nav>
         <p>&copy; 2024 Narumi Tamezawa</p>
     </footer>
-
+    <!-- </div> -->
 
     <!-- External JS -->
     <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 
