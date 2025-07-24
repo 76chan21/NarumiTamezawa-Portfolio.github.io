@@ -51,6 +51,33 @@ window.addEventListener('load', function () {
     }, 1000);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const reelThumbnails = document.querySelectorAll('.video-thumbnail');
+    const reelLightbox = document.getElementById('reel-lightbox');
+    const reelPlayer = document.getElementById('reel-player');
+    const closeBtn = reelLightbox.querySelector('.close-lightbox');
+
+    reelThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            const embedUrl = thumbnail.getAttribute('data-embed-url');
+            reelPlayer.src = embedUrl;
+            reelLightbox.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        reelPlayer.src = ''; // 停止
+        reelLightbox.classList.remove('active');
+    });
+
+    reelLightbox.addEventListener('click', (e) => {
+        if (e.target === reelLightbox) {
+            reelPlayer.src = '';
+            reelLightbox.classList.remove('active');
+        }
+    });
+});
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     // 2.5秒後にローディング画面をフェードアウト
 //     setTimeout(function () {
