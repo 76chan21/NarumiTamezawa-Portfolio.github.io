@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 650px) {
+  #about {
+    flex-direction: column;
+  }
+}
 #about .hero #about-hero {
   width: 40vw;
   height: 700px;
@@ -10,6 +15,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+}
+@media (max-width: 650px) {
+  #about .hero #about-hero {
+    height: 56.25vw;
+  }
 }
 #about #describe {
   margin-top: 50px;

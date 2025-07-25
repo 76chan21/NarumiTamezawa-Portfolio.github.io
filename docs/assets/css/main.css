@@ -2,7 +2,7 @@
 /* ロゴフェードイン・アウト */
 /* コンテンツを非表示にする */
 #hero {
-  width: 100vw;
+  width: 100vw !important;
   height: 42.5vw;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
 }
 @media (max-width: 650px) {
   #hero video {
-    width: 150%;
+    width: 100%;
   }
 }
 #hero #heroVideo {
@@ -257,32 +257,34 @@
 #reels-carousel {
   display: flex;
   overflow-x: auto;
-  height: 568px;
   overflow-y: hidden;
   gap: 10px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 @media (max-width: 400px) {
   #reels-carousel {
-    height: 284px;
+    padding: 0 5px;
   }
 }
 
 /* サムネイル */
 .video-thumbnail {
-  flex: 0 0 auto;
-  width: 320px;
-  /* 9:16用に高さとバランス調整 */
-  height: 568px;
+  flex: 0 0 22vw;
+  min-width: 0;
+  max-width: 500px;
+  aspect-ratio: 9/16;
   cursor: pointer;
   scroll-snap-align: start;
   position: relative;
 }
 @media (max-width: 400px) {
   .video-thumbnail {
-    height: 284px;
-    width: 160px;
+    flex: 0 0 38vw;
+    max-width: 500px;
   }
 }
 
@@ -317,6 +319,16 @@
   max-width: 90vw;
   max-height: 90vh;
   border: none;
+}
+
+#reel {
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 400px) {
+  #reel {
+    padding: 0 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,10 +7,12 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 main {
   margin-top: 70px !important;
+  width: 100vw;
 }
 
 .inner {
@@ -25,7 +27,7 @@ main {
 }
 @media (max-width: 400px) {
   .inner {
-    max-width: 360px;
+    max-width: 320px;
     margin: 0 auto;
   }
 }

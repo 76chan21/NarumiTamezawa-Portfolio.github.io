@@ -34,6 +34,10 @@ $text-weight: 300;
     align-items: center;
     justify-content: space-around;
 
+    @include respond-to(medium) {
+        flex-direction: column;
+    }
+
     .hero {
         // background-color: $main-color;
 
@@ -45,9 +49,9 @@ $text-weight: 300;
             background-repeat: no-repeat;
             background-position: top;
 
-            // @include respond-to(medium) {
-            //     height: calc(100vw * 0.5625);
-            // }
+            @include respond-to(medium) {
+                height: calc(100vw * 0.5625);
+            }
         }
     }
 

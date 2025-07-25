@@ -73,7 +73,7 @@ $text-weight: 300;
 // }
 
 #hero {
-    width: 100vw;
+    width: 100vw !important;
     height: calc(100vw * 0.425);
     overflow: hidden;
 
@@ -94,7 +94,7 @@ $text-weight: 300;
         z-index: 1;
 
         @include respond-to(medium) {
-            width: 150%;
+            width: 100%;
             // transform: translateX(-16%)
         }
     }
@@ -340,33 +340,37 @@ $text-weight: 300;
     font-weight: $thick-font;
 }
 
+
+// REEL SECTION
 #reels-carousel {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 568px;
     gap: 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    width: 100%; // NEW: ビューポート幅に合わせる
+    padding: 0 10px; // 左右少し余白で見やすく
+    box-sizing: border-box;
 
     @include respond-to(small) {
-        height: 284px;
-        padding-left: 10px; // 左端に余白を追加してレイアウト崩れを防ぐ
+        padding: 0 5px;
     }
 }
 
 /* サムネイル */
 .video-thumbnail {
-    flex: 0 0 auto;
-    width: 320px;
-    height: 568px;
+    flex: 0 0 22vw; // ← この書き方は可
+    min-width: 0; // ← 必ず追加
+    max-width: 500px; // ← スマホで広がりすぎないように上限
+    aspect-ratio: 9/16; // 縦長比率
     cursor: pointer;
     scroll-snap-align: start;
     position: relative;
 
     @include respond-to(small) {
-        width: 160px;
-        height: 284px;
+        flex: 0 0 38vw;
+        max-width: 500px;
     }
 }
 
