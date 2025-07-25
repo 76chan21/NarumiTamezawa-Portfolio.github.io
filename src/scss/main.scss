@@ -343,14 +343,15 @@ $text-weight: 300;
 #reels-carousel {
     display: flex;
     overflow-x: auto;
-    height: 568px;
     overflow-y: hidden;
+    height: 568px;
     gap: 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 
     @include respond-to(small) {
         height: 284px;
+        padding-left: 10px; // 左端に余白を追加してレイアウト崩れを防ぐ
     }
 }
 
@@ -358,15 +359,14 @@ $text-weight: 300;
 .video-thumbnail {
     flex: 0 0 auto;
     width: 320px;
-    /* 9:16用に高さとバランス調整 */
     height: 568px;
     cursor: pointer;
     scroll-snap-align: start;
     position: relative;
 
     @include respond-to(small) {
-        height: 284px;
         width: 160px;
+        height: 284px;
     }
 }
 
@@ -401,4 +401,13 @@ $text-weight: 300;
     max-width: 90vw;
     max-height: 90vh;
     border: none;
+}
+
+#reel {
+    width: 100%;
+    overflow: hidden; // 横幅はみ出しを防ぐ
+
+    @include respond-to(small) {
+        padding: 0 10px; // 横スクロールエリアの両端に余白
+    }
 }
