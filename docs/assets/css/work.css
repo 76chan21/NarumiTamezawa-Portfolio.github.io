@@ -193,6 +193,26 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+.article-wrap .work #tnt-thumb {
+  background-image: url(../img/tnt-thumb_10.png);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #paman-thumb {
+  background-image: url(../img/pa-man_10.png);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #pawomen-thumb {
+  background-image: url(../img/pa-women_10.png);
+  background-size: cover;
+  background-position: center;
+}
+.article-wrap .work #paweb-thumb {
+  background-image: url(../img/PA-web_10.png);
+  background-size: cover;
+  background-position: center;
+}
 @media (max-width: 650px) {
   .article-wrap .work {
     width: 100%;
